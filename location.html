@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+   <head>
+      <title></title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+      <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+
+      <script type="text/javascript">
+         
+         function GetMap()
+         {
+            
+            // Set the map options
+            var mapOptions = {credentials:"Bing Maps Key"};
+
+            // Initialize the map
+            var map = new Microsoft.Maps.Map(document.getElementById("mapDiv"), mapOptions);
+
+            // Initialize the location provider
+            var geoLocationProvider = new Microsoft.Maps.GeoLocationProvider(map);
+
+            // Get the user's current location
+            geoLocationProvider.getCurrentPosition();
+          
+         }
+
+      </script>
+   </head>
+   <body onload="GetMap();">
+      <div id='mapDiv' style="position:relative; width:400px; height:400px;"></div>       
+   </body>
+</html>
