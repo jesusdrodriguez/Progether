@@ -1,113 +1,59 @@
-<!-- This is the html file that has all the attributes of an individual post. 
-Included is the profile picture, specified by id="profile-picture", the username of whoever
-created the post, specified by id="username", the description/contents of the post, specified 
-by id="description".
-NOTE: The date and time are in each post, but it is not given the correct value nor is it 
-specified by a specific id tag. If the date needs to be in the post it has to be updated by someone. -->
+<!DOCTYPE HTML>
+<!--
+    Eventually by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Edit Profile</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        
+        <link rel="stylesheet" href="assets/css/main.css" />
+        
+    </head>
+    <body>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
+        <!-- Header -->
+            <header id="header">
+                <h3>Edit Profile</h3>
+                <!--<p>Collaborative Programming made easy.</p>-->
+            </header>
+            <form id="signup-form" method="post" action="#">
+                <img src="test.jpg" alt="profile_picture" width="15%" height="15%" id="profile-picture" />
+                <input type="submit" value="Change profile picture" />
+            </form>
+            <form id="signup-form" method="post" action="#">
+                <p>Name</p>
+                <input type="text" name="name" id="name" placeholder="" />
+            </form>
+            <form id="signup-form" method="post" action="#">
+                <p>Email</p>
+                <input type="email" name="email" id="email" placeholder="" />
+            </form>
+            <form id="signup-form" method="post" action="#">
+                <p>Bio</p>
+                <input type="text" name="name" id="name" placeholder="" />
+            </form>
+            <form>
+                <input type="submit" value="Submit" />
+            </form>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <!-- Footer -->
+            <footer id="footer">
+                <ul class="icons">
+                
+                    <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; Progether.</li><li>Credits: HTML5 UP</a></li>
+                </ul>
+            </footer>
 
-    <title>Edit Profile</title>
+        
+            <script src="assets/js/main.js"></script>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/blog-home.css" rel="stylesheet">
-    
-    <!--<link href="navbar-fixed-top.css" rel="stylesheet">-->
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Progether</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <!--
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>-->
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Logout</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-    
-
-</head>
-
-<body>  
-<div id="main-section">
-    <h4>Edit Profile</h4>
-    <!--Profile picture edit section-->
-    <div id="edit-section">
-        <p id="gray-word"><b>Profile picture</b></p>
-        <table>
-            <tr>
-                <td><img src="test.jpg" alt="profile-picture" id="profile-picture"/></td>
-                <td><button class="btn" id="upload-new-picture">Upload new picture</button></td>
-            </tr>
-        </table>
-    </div>
-    <!--Change your name -->
-    <div id="edit-section">
-        <p id="gray-word"><b>Name</b></p>
-        <input type="text" class="form-control" id="name-input">
-    </div>
-    <!--Email-->
-    <div id="edit-section">
-        <p id="gray-word"><b>Email</b></p>
-        <input type="text" class="form-control" id="email-input">
-        <p id="gray-word"><input type="checkbox" value="" id="gray-word"> Publicly visible to anyone?</p>
-    </div>
-    <!--bio-->
-    <div id="edit-section">
-        <p id="gray-word"><b>Bio</b></p>
-        <textarea class="form-control" rows="4" id="bio"></textarea>
-    </div>
-    <button class="btn" id="submit-button">Submit</button>
-</div>
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
-
+    </body>
 </html>
